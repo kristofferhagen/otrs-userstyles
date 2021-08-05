@@ -1,0 +1,31 @@
+/* ==UserStyle==
+@name           OTRS 8 UserStyles
+@namespace      github.com/kristofferhagen/otrs-userstyles
+@version        1.0.0
+@description    Various improvements to OTRS 8
+@author         Kristoffer Hagen [kristoffer.r.hagen@gmail.com]
+@preprocessor   less
+@license        MIT
+@var            text     otrs_instance            "OTRS instance" "'https://otrs.example.com/'"
+@var            checkbox smaller_sidebar_enabled  "Enable smaller sidebar" 1
+@var            checkbox unread_indicator_enabled "Enable unread indicator in ticket title" 1
+@var            text     unread_indicator         "Unread indicator" "★"
+==/UserStyle== */
+
+@-moz-document url-prefix(@otrs_instance) {
+    & when (@smaller_sidebar_enabled=1) {
+        .ColumnLayout.Columns__Two > .ColumnLayout__Content > .row > .col-md-6:first-child {
+            flex: 0 0 66.666667%;
+            max-width: 66.666667%;
+        }
+        .ColumnLayout.Columns__Two > .ColumnLayout__Content > .row > .col-md-6:last-child {
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+        }
+    }
+    & when (@unread_indicator_enabled=1) {
+        .BusinessObjectListTable__Row--Unread [id$='-Title'] > span::before {
+            content: "@{unread_indicator}";
+        }
+    }
+}
