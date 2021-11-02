@@ -8,8 +8,6 @@
 @license        MIT
 @var            text     otrs_instance            "OTRS instance" "'https://otrs.example.com/'"
 @var            checkbox smaller_sidebar_enabled  "Enable smaller sidebar" 1
-@var            checkbox unread_indicator_enabled "Enable unread indicator in ticket title" 1
-@var            text     unread_indicator         "Unread indicator" "★"
 ==/UserStyle== */
 
 @-moz-document url-prefix(@otrs_instance) {
@@ -21,11 +19,6 @@
         .ColumnLayout.Columns__Two > .ColumnLayout__Content > .row > .col-lg-6:last-child {
             flex: 0 0 33.333333%;
             max-width: 33.333333%;
-        }
-    }
-    & when (@unread_indicator_enabled=1) {
-        .BusinessObjectListTable__Row--Unread [id$='-Title'] > span::before {
-            content: "@{unread_indicator}";
         }
     }
 }
