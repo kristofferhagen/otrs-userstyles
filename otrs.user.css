@@ -1,13 +1,14 @@
 /* ==UserStyle==
 @name           OTRS 8 UserStyles
 @namespace      github.com/kristofferhagen/otrs-userstyles
-@version        1.0.0
+@version        1.1.0
 @description    Various improvements to OTRS 8
 @author         Kristoffer Hagen [kristoffer.r.hagen@gmail.com]
 @preprocessor   less
 @license        MIT
 @var            text     otrs_instance            "OTRS instance" "'https://otrs.example.com/'"
 @var            checkbox smaller_sidebar_enabled  "Enable smaller sidebar" 1
+@var            checkbox overflow_fix_enabled  "Enable overflow fix" 1
 ==/UserStyle== */
 
 @-moz-document url-prefix(@otrs_instance) {
@@ -19,6 +20,13 @@
         .ColumnLayout.Columns__Two > .ColumnLayout__Content > .row > .col-lg-6:last-child {
             flex: 0 0 33.333333%;
             max-width: 33.333333%;
+        }
+    }
+
+    & when (@overflow_fix_enabled=1) {
+        .Widget__Content {
+            overflow-x: hidden !important;
+            overflow-y: hidden !important;
         }
     }
 }
