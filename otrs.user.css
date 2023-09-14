@@ -65,10 +65,10 @@
             background-color: #161616 !important;
         }
         .Style__Dark .TicketListWidget .BusinessObjectListTable tbody tr.BusinessObjectListTable__Row--Removed--Write {
-            background-color: #290000 !important;
+            background-color: #360000 !important;
         }
         .Style__Dark .TicketListWidget .BusinessObjectListTable tbody tr.BusinessObjectListTable__Row--Removed--Write:nth-of-type(2n) {
-            background-color: #360000 !important;
+            background-color: #440000 !important;
         }
     }
 }
