@@ -32,27 +32,27 @@
     }
 
     & when (@priority_color_improvement_enabled=1) {
-        .Style__Dark .Priority[label^=1] {
+        .Style__Dark .Priority[label^="1"] {
             background-color: #161616 !important;
             border-color: #03c4f0 !important;
             color: #e2e7ee !important;
         }
-        .Style__Dark .Priority[label^=2] {
+        .Style__Dark .Priority[label^="2"] {
             background-color: #161616 !important;
             border-color: #83bfc8 !important;
             color: #e2e7ee !important;
         }
-        .Style__Dark .Priority[label^=3] {
+        .Style__Dark .Priority[label^="3"] {
             background-color: #161616 !important;
             border-color: #cdcdcd !important;
             color: #e2e7ee !important;
         }
-        .Style__Dark .Priority[label^=4] {
+        .Style__Dark .Priority[label^="4"] {
             background-color: #161616 !important;
             border-color: #ffaaaa !important;
             color: #e2e7ee !important;
         }
-        .Style__Dark .Priority[label^=5] {
+        .Style__Dark .Priority[label^="5"] {
             background-color: #161616 !important;
             border-color: #ff505e !important;
             color: #e2e7ee !important;
