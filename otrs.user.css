@@ -10,6 +10,7 @@
 @var            checkbox smaller_sidebar_enabled  "Enable smaller sidebar" 1
 @var            checkbox overflow_fix_enabled  "Enable overflow fix" 1
 @var            checkbox priority_color_improvement_enabled  "Enable darkmode priority color improvement" 1
+@var            checkbox ticketlist_update_improvement_enabled  "Enable darkmode ticketlist update improvement" 1
 ==/UserStyle== */
 
 @-moz-document url-prefix(@otrs_instance) {
@@ -56,6 +57,12 @@
             background-color: #161616 !important;
             border-color: #ff505e !important;
             color: #e2e7ee !important;
+        }
+    }
+
+    & when (@priority_color_improvement_enabled=1) {
+        .Style__Dark .TicketListWidget .RefreshNotificaiton {
+            background-color: #161616 !important;
         }
     }
 }
