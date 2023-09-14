@@ -9,6 +9,7 @@
 @var            text     otrs_instance            "OTRS instance" "'https://otrs.example.com/'"
 @var            checkbox smaller_sidebar_enabled  "Enable smaller sidebar" 1
 @var            checkbox overflow_fix_enabled  "Enable overflow fix" 1
+@var            checkbox priority_color_improvement_enabled  "Enable darkmode priority color improvement" 1
 ==/UserStyle== */
 
 @-moz-document url-prefix(@otrs_instance) {
@@ -27,6 +28,34 @@
         .Widget__Content {
             overflow-x: hidden !important;
             overflow-y: hidden !important;
+        }
+    }
+
+    & when (@priority_color_improvement_enabled=1) {
+        .Style__Dark .Priority[label^=1] {
+            background-color: #161616 !important;
+            border-color: #03c4f0 !important;
+            color: #e2e7ee !important;
+        }
+        .Style__Dark .Priority[label^=2] {
+            background-color: #161616 !important;
+            border-color: #83bfc8 !important;
+            color: #e2e7ee !important;
+        }
+        .Style__Dark .Priority[label^=3] {
+            background-color: #161616 !important;
+            border-color: #cdcdcd !important;
+            color: #e2e7ee !important;
+        }
+        .Style__Dark .Priority[label^=4] {
+            background-color: #161616 !important;
+            border-color: #ffaaaa !important;
+            color: #e2e7ee !important;
+        }
+        .Style__Dark .Priority[label^=5] {
+            background-color: #161616 !important;
+            border-color: #ff505e !important;
+            color: #e2e7ee !important;
         }
     }
 }
