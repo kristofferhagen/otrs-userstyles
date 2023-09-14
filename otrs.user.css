@@ -60,7 +60,7 @@
         }
     }
 
-    & when (@priority_color_improvement_enabled=1) {
+    & when (@ticketlist_update_improvement_enabled=1) {
         .Style__Dark .TicketListWidget .RefreshNotificaiton {
             background-color: #161616 !important;
         }
