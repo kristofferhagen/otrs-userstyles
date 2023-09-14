@@ -64,5 +64,8 @@
         .Style__Dark .TicketListWidget .RefreshNotification {
             background-color: #161616 !important;
         }
+        .Style__Dark .TicketListWidget .BusinessObjectListTable__Row--Removed--Write {
+            background-color: #360000 !important;
+        }
     }
 }
