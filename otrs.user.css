@@ -61,7 +61,7 @@
     }
 
     & when (@ticketlist_update_improvement_enabled=1) {
-        .Style__Dark .TicketListWidget .RefreshNotificaiton {
+        .Style__Dark .TicketListWidget .RefreshNotification {
             background-color: #161616 !important;
         }
     }
